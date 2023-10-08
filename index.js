@@ -7,7 +7,11 @@
  * trimProperties({ name: '  jane  ' }) // returns a new object { name: 'jane' }
  */
 function trimProperties(obj) {
-  // ✨ implement
+  const copy = { ...obj }
+  for (let properties in copy) {
+    copy[properties] = copy[properties].trim()
+  }
+  return copy
 }
 
 /**
@@ -20,6 +24,7 @@ function trimProperties(obj) {
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  return true
 }
 
 /**
