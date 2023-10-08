@@ -40,7 +40,16 @@ function trimPropertiesMutation(obj) {
  */
 function findLargestInteger(integers) {
   // ✨ implement
+  let largest = null;
+  for (let i = 0; i < integers.length; i++) {
+    let curr = integers[i]["integer"]
+    if (curr > largest) {
+      largest = curr
+    }
+  }
+  return largest
 }
+
 
 class Counter {
   /**
